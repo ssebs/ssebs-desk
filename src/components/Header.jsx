@@ -13,26 +13,35 @@ const Header = () => {
                 className="navbar navbar-expand-sm navbar-light bg-light py-0"
                 style={{ fontSize: "0.8rem" }}
             >
-                <div className="container pl-0 ml-auto">
-                    <div className="navbar-nav">
-                        <a className="nav-item nav-link  py-1" href="/#">
+                <div className="container pl-0">
+                    <div className="navbar-nav mr-auto">
+                        <a className="nav-item nav-link py-1" href="/#">
                             All Tickets
                         </a>
                         <NavSeperator />
-                        <a className="nav-item nav-link  py-1" href="/#">
+                        <a className="nav-item nav-link py-1" href="/#">
                             My Tickets
                         </a>
                         <NavSeperator />
-                        <a className="nav-item nav-link  py-1" href="/#">
+                        <a className="nav-item nav-link py-1" href="/#">
                             Unowned Tickets
                         </a>
                         <NavSeperator />
-                        <a className="nav-item nav-link  py-1" href="/#">
+                        <a className="nav-item nav-link py-1" href="/#">
                             User Management
                         </a>
                         <NavSeperator />
-                        <a className="nav-item nav-link  py-1" href="/#">
+                        <a className="nav-item nav-link py-1" href="/#">
                             Reporting
+                        </a>
+                    </div>
+                    <div className="navbar-nav ml-auto">
+                        <a className="nav-item nav-link py-1" href="/#">
+                            Profile
+                        </a>
+                        <NavSeperator />
+                        <a className="nav-item nav-link py-1" href="/#">
+                            Logout
                         </a>
                     </div>
                 </div>
