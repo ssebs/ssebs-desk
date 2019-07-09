@@ -1,5 +1,11 @@
 import React from "react";
 
+const NavSeperator = () => (
+    <div className="nav-item py-1 text-muted" style={{ lineHeight: "1rem" }}>
+        |
+    </div>
+);
+
 const Header = () => {
     return (
         <>
@@ -8,18 +14,22 @@ const Header = () => {
                 style={{ fontSize: "0.8rem" }}
             >
                 <div className="navbar-nav">
-                    <a className="nav-item nav-link py-1" href="/#">
+                    <a className="nav-item nav-link  py-1" href="/#">
                         All Tickets
                     </a>
+                    <NavSeperator />
                     <a className="nav-item nav-link  py-1" href="/#">
                         My Tickets
                     </a>
+                    <NavSeperator />
                     <a className="nav-item nav-link  py-1" href="/#">
                         Unowned Tickets
                     </a>
+                    <NavSeperator />
                     <a className="nav-item nav-link  py-1" href="/#">
                         User Management
                     </a>
+                    <NavSeperator />
                     <a className="nav-item nav-link  py-1" href="/#">
                         Reporting
                     </a>
@@ -32,7 +42,7 @@ const Header = () => {
                         <input
                             className="form-control mr-sm-2"
                             type="search"
-                            style={{width:"175px"}}
+                            style={{ width: "175px" }}
                             placeholder="Search"
                             aria-label="Search"
                         />
