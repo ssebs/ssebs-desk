@@ -29,6 +29,7 @@ const Home = () => {
             <Sidebar />
             <div className="home-layout-center">
                 <TicketList title="My Tickets" list={sampleMyTickets} />
+                <TicketList title="All Tickets" list={sampleAllTickets} />
             </div>
             <FilterBox />
         </div>

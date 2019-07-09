@@ -7,9 +7,7 @@ $lightBorder: #dcd7d7;
 @import "node_modules/bootstrap/scss/bootstrap";
 body {
     min-width: 768px; // not yet responsive...
-}
-header {
-    max-height: 83px;
+    background-color: $midLight;
 }
 .navbar-brand {
     padding-left: 8px; // same as above nav item
@@ -17,11 +15,10 @@ header {
 .home-layout {
     max-width: 1280px;
     margin: auto;
-    background-color: $midLight;
     display: grid;
     grid-template-columns: 250px auto 150px;
     // 83 is the height of the header
-    grid-auto-rows: calc(100vh - 83px);
+    grid-template-rows: 550px;
     grid-gap: 1rem;
 
     .home-layout-left {

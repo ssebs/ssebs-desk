@@ -8,12 +8,12 @@ const NavSeperator = () => (
 
 const Header = () => {
     return (
-        <>
+        <div className="sticky-top">
             <nav
                 className="navbar navbar-expand-sm navbar-light bg-light py-0"
                 style={{ fontSize: "0.8rem" }}
             >
-                <div className="container pl-0">
+                <div className="container px-0" style={{ maxWidth: "1280px" }}>
                     <div className="navbar-nav mr-auto">
                         <a className="nav-item nav-link py-1" href="/#">
                             All Tickets
@@ -47,7 +47,7 @@ const Header = () => {
                 </div>
             </nav>
             <nav className="navbar navbar-expand-sm navbar-light bg-primary justify-content-between">
-                <div className="container pl-0 ml-auto">
+            <div className="container px-0 ml-auto" style={{ maxWidth: "1280px" }}>
                     <a className="nav-item nav-link navbar-brand">ssebsDesk</a>
                     <div className="navbar-nav">
                         <form className="form-inline">
@@ -68,7 +68,7 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-        </>
+        </div>
     );
 };
 
