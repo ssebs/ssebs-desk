@@ -3,3 +3,6 @@ $secondary: #41ff91;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+.navbar-brand {
+    padding-left: 8px; // same as above nav item
+}
