@@ -34,14 +34,18 @@ header {
     }
 }
 .ticket-list {
-    a {
+    button {
         color: $dark;
         background-color: $white;
         border: 1px solid $lightBorder;
         border-radius: 5px;
-        // text-align: center;
+        text-align: left;
         display: block;
+        width: 100%;
         padding: 0.5rem;
         margin: 0.5rem auto;
+        .font-weight-kindabold {
+            font-weight: 500;
+        }
     }
 }

@@ -1,21 +1,24 @@
 import React from "react";
 
-const TicketList = ({ list }) => {
+const TicketList = ({ list, title}) => {
     return (
         <div className="ticket-list">
             {list.map(tkt => {
                 let shortBody = "" + tkt.body;
                 shortBody = shortBody.substr(0, 64) + "...";
                 return (
-                    <a key={tkt.id} href="/#">
+                    <button key={tkt.id} className="">
                         <div className="d-flex justify-content-between">
-                            <div>
-                                <strong>{tkt.subject}</strong>
+                            <div className="font-weight-kindabold">
+                                {tkt.subject}
                             </div>
                             <div className="text-muted">{tkt.requestor}</div>
                         </div>
-                        {shortBody}
-                    </a>
+                        <div className="d-flex justify-content-between">
+                            <div className="">{shortBody}</div>
+                            <div>Status: {tkt.status}</div>
+                        </div>
+                    </button>
                 );
             })}
         </div>
