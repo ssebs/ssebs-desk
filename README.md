@@ -14,12 +14,12 @@ $ npm install
 
 ## Running
 - Backend
-  - `npm run server`
+  - `$ npm run server`
 - Frontend
-  - `npm run start`
+  - `$ npm run start`
 
 ## Building
 - Frontend
-  - `npm run build`
+  - `$ npm run build`
 - Backend
   - Don't use this backend, use something more secure
