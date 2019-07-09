@@ -3,6 +3,7 @@ import React from "react";
 const TicketList = ({ list, title}) => {
     return (
         <div className="ticket-list">
+            <h3>{title}</h3>
             {list.map(tkt => {
                 let shortBody = "" + tkt.body;
                 shortBody = shortBody.substr(0, 64) + "...";

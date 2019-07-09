@@ -1,5 +1,7 @@
 $primary: #41afff;
 $secondary: #41ff91;
+$midLight: #f3f3f3;
+$lighter: #fdfdfd;
 $lightBorder: #dcd7d7;
 
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -15,7 +17,7 @@ header {
 .home-layout {
     max-width: 1280px;
     margin: auto;
-    background-color: $light;
+    background-color: $midLight;
     display: grid;
     grid-template-columns: 250px auto 150px;
     // 83 is the height of the header
@@ -23,29 +25,42 @@ header {
     grid-gap: 1rem;
 
     .home-layout-left {
-        border: 1px solid $primary;
+        border: 1px solid $lightBorder;
+        border-radius: 5px;
+        padding: 0.25rem 1rem;
+        margin: 0.75rem 0.25rem;
+        background-color: $lighter;
     }
     .home-layout-center {
         // background-color: $white;
         // border: 1px solid red;
+        .ticket-list {
+            border: 1px solid $lightBorder;
+            border-radius: 5px;
+            padding: 0.25rem 1rem;
+            margin: 0.75rem auto;
+            background-color: $lighter;
+            button {
+                color: $dark;
+                background-color: $white;
+                border: 1px solid $lightBorder;
+                border-radius: 5px;
+                text-align: left;
+                display: block;
+                width: 100%;
+                padding: 0.5rem;
+                margin: 0.5rem auto;
+                .font-weight-kindabold {
+                    font-weight: 500;
+                }
+            }
+        }
     }
     .home-layout-right {
-        border: 1px solid $secondary;
-    }
-}
-.ticket-list {
-    button {
-        color: $dark;
-        background-color: $white;
         border: 1px solid $lightBorder;
         border-radius: 5px;
-        text-align: left;
-        display: block;
-        width: 100%;
-        padding: 0.5rem;
-        margin: 0.5rem auto;
-        .font-weight-kindabold {
-            font-weight: 500;
-        }
+        padding: 0.25rem 1rem;
+        margin: 0.75rem 0.25rem;
+        background-color: $lighter;
     }
 }
