@@ -1,6 +1,6 @@
 import React from "react";
 
-const TicketList = ({ list, title}) => {
+const TicketList = ({ list, title, history }) => {
     return (
         <div className="ticket-list">
             <h3>{title}</h3>
@@ -8,7 +8,12 @@ const TicketList = ({ list, title}) => {
                 let shortBody = "" + tkt.body;
                 shortBody = shortBody.substr(0, 64) + "...";
                 return (
-                    <button key={tkt.id} className="">
+                    <button
+                        key={tkt.id}
+                        onClick={() => {
+                            history.push(`/ticket/${tkt.id}`);
+                        }}
+                    >
                         <div className="d-flex justify-content-between">
                             <div className="font-weight-kindabold">
                                 {tkt.subject}
