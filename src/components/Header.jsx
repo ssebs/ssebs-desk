@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const NavSeperator = () => (
     <div className="nav-item py-1 text-muted" style={{ lineHeight: "1rem" }}>
@@ -15,40 +16,40 @@ const Header = () => {
             >
                 <div className="container px-0" style={{ maxWidth: "1280px" }}>
                     <div className="navbar-nav mr-auto">
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/">
                             All Tickets
-                        </a>
+                        </Link>
                         <NavSeperator />
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/">
                             My Tickets
-                        </a>
+                        </Link>
                         <NavSeperator />
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/">
                             Unowned Tickets
-                        </a>
+                        </Link>
                         <NavSeperator />
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/users">
                             User Management
-                        </a>
+                        </Link>
                         <NavSeperator />
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/reports">
                             Reporting
-                        </a>
+                        </Link>
                     </div>
                     <div className="navbar-nav ml-auto">
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/users/me">
                             Profile
-                        </a>
+                        </Link>
                         <NavSeperator />
-                        <a className="nav-item nav-link py-1" href="/#">
+                        <Link className="nav-item nav-link py-1" to="/users/logout">
                             Logout
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
             <nav className="navbar navbar-expand-sm navbar-light bg-primary justify-content-between">
             <div className="container px-0 ml-auto" style={{ maxWidth: "1280px" }}>
-                    <a className="nav-item nav-link navbar-brand">ssebsDesk</a>
+                    <Link className="nav-item nav-link navbar-brand" to="/">ssebsDesk</Link>
                     <div className="navbar-nav">
                         <form className="form-inline">
                             <input
