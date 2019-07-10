@@ -40,8 +40,8 @@ const Ticket = props => {
             {ticket && statuses && users && adminUsers ? (
                 <>
                     <div className="ticket-meta">
-                        <h5>Ticket #{props.match.params.id}</h5>
-                        <hr/>
+                        <h5>Ticket #{ticket.id}</h5>
+                        <hr />
                         <div className="form-group">
                             <label htmlFor="status">Status:</label>
                             <select
@@ -87,7 +87,16 @@ const Ticket = props => {
                     </div>
                     <section className="ticket-center">
                         <div className="ticket-header">
-                            <h4>{ticket.subject}</h4>
+                            <div className="d-flex justify-content-between">
+                                <h4>{ticket.subject}</h4>
+                                <p className="text-muted">
+                                    {users.map(user => {
+                                        if (user.id === ticket.requestor) {
+                                            return user.name;
+                                        }
+                                    })}
+                                </p>
+                            </div>
                             <p>{ticket.body}</p>
                         </div>
                         {ticket.comments &&
