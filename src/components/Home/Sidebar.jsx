@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = props => {
     return (
         <div className="home-layout-left">
-            <nav class="nav flex-column">
-                <a href="/#" className="nav-link">My Tickets</a>
+            <nav className="nav flex-column">
+                <Link to="/" className="nav-link">My Tickets</Link>
                 <a href="/#" className="nav-link">All Tickets</a>
                 <a href="/#" className="nav-link">Unowned Tickets</a>
             </nav>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import FilterBox from "./FilterBox";
 import Sidebar from "./Sidebar";
@@ -24,13 +24,27 @@ for (let i = 0; i < 12; i++) {
 }
 
 const Home = () => {
+    const [myTickets, setMyTickets] = useState(null);
+    const [allTickets, setAllTickets] = useState(null);
+
+    useEffect(() => {
+        fetch(`http://localhost:3005/tickets`)
+            .then(resp => resp.json())
+            .then(resp => {
+                setAllTickets(resp);
+                setMyTickets(resp.slice(0, 2));
+            });
+    }, []);
+
     return (
         <div className="home-layout">
             <Sidebar />
-            <div className="home-layout-center">
-                <TicketList title="My Tickets" list={sampleMyTickets} />
-                <TicketList title="All Tickets" list={sampleAllTickets} />
-            </div>
+            {myTickets && allTickets && (
+                <div className="home-layout-center">
+                    <TicketList title="My Tickets" list={myTickets} />
+                    <TicketList title="All Tickets" list={allTickets} />
+                </div>
+            )}
             <FilterBox />
         </div>
     );
