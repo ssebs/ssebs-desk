@@ -40,7 +40,7 @@ const Ticket = props => {
             {ticket && statuses && users && adminUsers ? (
                 <>
                     <div className="ticket-meta">
-                        <h5>Ticket #{ticket.id}</h5>
+                        <h5 className="text-center">Ticket #{ticket.id}</h5>
                         <hr />
                         <div className="form-group">
                             <label htmlFor="status">Status:</label>
@@ -113,12 +113,17 @@ const Ticket = props => {
                             ))}
                     </section>
                     <div className="ticket-actions">
-                        <h5>Actions</h5>
-                        <ul>
-                            <li>Reply</li>
-                            <li>Comment</li>
-                            <li>Resolve</li>
-                        </ul>
+                        <h5 className="text-center">Actions</h5>
+                        <hr />
+                        <button className="btn btn-outline-primary btn-sm mb-2 w-100">
+                            Reply
+                        </button>
+                        <button className="btn btn-outline-primary btn-sm mb-2 w-100">
+                            Comment
+                        </button>
+                        <button className="btn btn-outline-primary btn-sm mb-2 w-100">
+                            Resolve
+                        </button>
                     </div>
                 </>
             ) : (
